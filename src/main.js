@@ -16,7 +16,7 @@ Vue.component('gmap', Gmap)
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyCAfFiWIqxOdVQkOsqm3TDuRpukuFpA1zc',
-        libraries: 'places',
+        libraries: 'visualization',
     }
 })
 
@@ -28,6 +28,6 @@ new Vue({
         AppTitle,
         DateSelector,
         Legend,
-        Gmap
+        Gmap,
     },
 })

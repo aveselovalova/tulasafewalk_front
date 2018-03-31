@@ -12,8 +12,8 @@ export default {
 }
 </script>
 <style>
-#app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+#logo {
+    font-family: 'IBM Plex Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;

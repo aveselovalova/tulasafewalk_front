@@ -1,15 +1,13 @@
 <template>
-    <div id='gmap'>
-        <gmap-map :center="center" :options="options" :zoom="14" map-type-id="terrain" style="width: 1000px; height: 700px">
-            <gmap-marker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="false" @click="center=m.position"></gmap-marker>
-        </gmap-map>
-    </div>
+    <gmap-map :center="center" :options="options" :zoom="14" map-type-id="terrain" style="width: 1000px; height: 700px">
+        <gmap-marker v-for="m in markers" :position="m.position" :clickable="true" :draggable="false" @click="center=m.position"></gmap-marker>
+    </gmap-map>
 </template>
 <script>
 export default {
 
     name: 'Gmap',
-
+    replace: 'True',
     data() {
         return {
             center: {
