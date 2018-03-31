@@ -2,21 +2,21 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router';
-import * as VueGoogleMaps from 'vue2-google-maps';
+import MapContainer from './components/Map-container.vue'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 Vue.config.productionTip = false;
+Vue.component('map-container', MapContainer)
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCAfFiWIqxOdVQkOsqm3TDuRpukuFpA1zc',
+    libraries: 'places'
+  }
+})
 
 new Vue({
   el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+  components: { App, MapContainer },
 })
 
-Vue.use(VueGoogleMaps, {
-	load: {
-		key: 'AIzaSyCAfFiWIqxOdVQkOsqm3TDuRpukuFpA1zc',
-		libraries: 'places'
-	}
-})
