@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import App from './App.vue';
-import Logo from './components/Logo.vue'
-import AppTitle from './components/AppTitle.vue'
-import Legend from './components/Legend.vue'
-import DateSelector from './components/Date-selector.vue'
-import Gmap from './components/Gmap.vue'
+import Logo from './Logo.vue'
+import AppTitle from './AppTitle.vue'
+import Legend from './Legend.vue'
+import DateSelector from './Date-selector.vue'
+import Gmap from './Gmap.vue'
+import './assets/css/style.css'
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.config.productionTip = false;
 Vue.component('logo', Logo)
