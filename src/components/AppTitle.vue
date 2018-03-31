@@ -1,18 +1,19 @@
 <template>
-    <div id="legend">
-        This is legend place
-    </div>
+	<div id='app-title'>Title</div>
 </template>
+
 <script>
 export default {
 
-    name: 'Legend',
-    data () {
+  name: 'AppTitle',
+
+  data () {
     return {
 
     }
   }
 }
 </script>
+
 <style lang="css" scoped>
 </style>

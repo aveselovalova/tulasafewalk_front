@@ -7,12 +7,11 @@
 export default {
 
     name: 'Date-selector',
+    data () {
+    return {
 
-    data() {
-        return {
-
-        }
     }
+  }
 }
 </script>
 <style lang="css" scoped>
