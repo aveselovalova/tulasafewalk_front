@@ -1,5 +1,5 @@
 <template>
-    <gmap-map :center="center" :options="options" :zoom="14" map-type-id="terrain" style="width: 1000px; height: 700px">
+    <gmap-map :center="center" :options="options" :zoom="14" map-type-id="terrain" style="height: 600px">
         <gmap-marker v-for="m in markers" :position="m.position" :clickable="true" :draggable="false" @click="center=m.position"></gmap-marker>
     </gmap-map>
 </template>
