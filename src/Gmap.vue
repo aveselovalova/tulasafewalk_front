@@ -13,7 +13,7 @@ export default {
     name: 'Gmap',
     replace: 'True',
 
-    data() {
+    data: function() {
         return {
             center: {
                 lat: 54.1911,
@@ -32,14 +32,20 @@ export default {
             }
         }
     },
-    created() {
-        var self = this;
-        axios.get(url)
-            .then(response => {
-                self.markers = response.data;
-                console.log(response.data);
-            }),
+    created: function() {
+        this.getMarkers();
     },
+    methods: {
+        getMarkers: function() {
+            axios.get(url)
+                .then(response => {
+                    var markersObjects = response.data.map(item => (JSON.parse(item)));
+                    this.markers = markersObjects;
+                    console.log(this.markers);
+                })
+                .catch(error => console.log(error.response.data))
+        }
+    }
 }
 </script>
 <style lang="css" scoped>
