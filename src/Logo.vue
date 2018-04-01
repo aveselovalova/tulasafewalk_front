@@ -1,6 +1,6 @@
 <template>
-    <div id='logo'>
-        <row><img src="./assets/logo.svg"></row>
+    <div id='logo' class='slide'>
+        <img src="./assets/logo.svg" class="center">
     </div>
 </template>
 <script>

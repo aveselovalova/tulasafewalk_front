@@ -41,7 +41,6 @@ export default {
                 .then(response => {
                     var markersObjects = response.data.map(item => (JSON.parse(item)));
                     this.markers = markersObjects;
-                    console.log(this.markers);
                 })
                 .catch(error => console.log(error.response.data))
         }

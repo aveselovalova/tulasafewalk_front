@@ -8,9 +8,6 @@ import Gmap from './Gmap.vue'
 import FullPage from 'vue-fullpage.js/src/FullPage';
 import $ from 'jquery'
 import './assets/css/style.css'
-import './assets/css/bootstrap-grid.css'
-import './assets/css/bootstrap-reboot.css'
-import './assets/css/bootstrap.css'
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.config.productionTip = false;
 Vue.component('logo', Logo)
