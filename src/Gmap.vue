@@ -4,42 +4,22 @@
     </gmap-map>
 </template>
 <script>
+import axios from 'axios'
+
+var url = "http://174.138.8.77:5000/get-data/?begin=0&end=111111111111"
+
 export default {
 
     name: 'Gmap',
     replace: 'True',
+
     data() {
         return {
             center: {
                 lat: 54.1911,
                 lng: 37.6143
             },
-            markers: [{
-                position: {
-                    lat: 54.1853,
-                    lng: 37.6775
-                }
-            }, {
-                position: {
-                    lat: 54.2017,
-                    lng: 37.7092
-                }
-            }, {
-                position: {
-                    lat: 54.1686,
-                    lng: 37.7097
-                }
-            }, {
-                position: {
-                    lat: 54.2264,
-                    lng: 37.6181
-                }
-            }, {
-                position: {
-                    lat: 54.2514,
-                    lng: 37.6336
-                }
-            }],
+            markers: [],
             options: {
                 clickableIcons: false,
                 fullscreenControl: false,
@@ -51,7 +31,15 @@ export default {
                 maptype: 'roadmap',
             }
         }
-    }
+    },
+    created() {
+        var self = this;
+        axios.get(url)
+            .then(response => {
+                self.markers = response.data;
+                console.log(response.data);
+            }),
+    },
 }
 </script>
 <style lang="css" scoped>

@@ -5,7 +5,12 @@ import AppTitle from './AppTitle.vue'
 import Legend from './Legend.vue'
 import DateSelector from './Date-selector.vue'
 import Gmap from './Gmap.vue'
+import FullPage from 'vue-fullpage.js/src/FullPage';
+import $ from 'jquery'
 import './assets/css/style.css'
+import './assets/css/bootstrap-grid.css'
+import './assets/css/bootstrap-reboot.css'
+import './assets/css/bootstrap.css'
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.config.productionTip = false;
 Vue.component('logo', Logo)
@@ -13,7 +18,7 @@ Vue.component('app-title', AppTitle)
 Vue.component('date-selector', DateSelector)
 Vue.component('map-legend', Legend)
 Vue.component('gmap', Gmap)
-
+Vue.component('full-page', FullPage.default);
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyCAfFiWIqxOdVQkOsqm3TDuRpukuFpA1zc',
@@ -30,5 +35,6 @@ new Vue({
         DateSelector,
         Legend,
         Gmap,
+        FullPage
     },
 })
